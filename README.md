@@ -43,8 +43,8 @@ class AppController extends Controller
         // Check trailing slash
         $pageURL = $this->getRequest()->getRequestTarget();
         if (!pathinfo($pageURL, PATHINFO_EXTENSION)
-            && !strstr($pageURL, '#')
-            && !strstr($pageURL, '?')
+            && strpos($pageURL, '#') === false
+            && strpos($pageURL, '?') === false
             && substr($pageURL, -1) != DS
         ) {
             return $this->redirect($pageURL, 301);
