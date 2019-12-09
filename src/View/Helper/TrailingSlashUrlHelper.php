@@ -1,4 +1,5 @@
 <?php
+
 /**
  * TrailingSlashUrl Helper
  *
@@ -18,8 +19,8 @@ class TrailingSlashUrlHelper extends UrlHelper
 {
     /**
      * @inheritdoc
-     * @param null $url The URL
-     * @param bool $options URL options
+     * @param string|array|null $url The URL
+     * @param array|bool $options URL options
      * @return string
      */
     public function build($url = null, $options = false)
