@@ -14,7 +14,7 @@ if (!function_exists('trailing_slash_url')) {
      * @param bool $justBaseURL Base URL result
      * @return string
      */
-    function trailing_slash_url($url, $justBaseURL = false)
+    function trailing_slash_url(string $url, bool $justBaseURL = false): string
     {
         $parsedUrl = parse_url(htmlspecialchars_decode($url));
         $scheme = isset($parsedUrl['scheme']) ? $parsedUrl['scheme'] . '://' : '';

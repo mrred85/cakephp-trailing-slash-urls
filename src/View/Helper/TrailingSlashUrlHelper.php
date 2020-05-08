@@ -23,7 +23,7 @@ class TrailingSlashUrlHelper extends UrlHelper
      * @param array|bool $options URL options
      * @return string
      */
-    public function build($url = null, $options = false)
+    public function build($url = null, $options = false): string
     {
         // No query and fragment in URL
         $justBaseURL = false;
